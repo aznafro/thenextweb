@@ -1,0 +1,510 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+*,
+*::before,
+*::after {
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+			box-sizing: border-box;
+}
+
+/**
+	TYPOGRAPHY
+**/
+body {
+	font: 400 100% Roboto, sans-serif;
+}
+
+h2 {
+	display: inline-block;
+	font-size: 30px;
+	font-weight: bold;
+	color: #f42;
+	margin-top: 50px;
+	margin-bottom: 20px;
+}
+
+h2:hover {
+	color: black;
+	cursor: pointer;
+}
+
+/**
+	HELPER CLASSES
+
+**/
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.vert-pad-sm {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.vert-pad-md {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+/**
+	LINKS
+**/
+a {
+	text-decoration: none;
+	color: black;
+}
+
+/**
+	TOP NAV
+**/
+
+.header-nav {
+	background-color: white;
+	width: 100%;
+	height: 50px;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+}
+
+.logo {
+	display: block;
+	background: -webkit-linear-gradient(to bottom right, darkmagenta, orangered);
+	background:    -moz-linear-gradient(to bottom right, darkmagenta, orangered);
+	background: 		linear-gradient(to bottom right, darkmagenta, orangered);
+	width: 105px;
+	height: 100%;
+	padding: 16px 19px 15px 19px;
+}
+
+.fa-search {
+	padding: 17px;
+	opacity: .4;
+}
+
+.fa-search:hover {
+	opacity: .6;
+	cursor: pointer;
+}
+
+.menu-box {
+	width: 45px;
+	display: inline-block;
+	padding: 18px 0;
+}
+
+.menu-box:hover {
+	cursor: pointer;
+}
+
+.line {
+	width: 47%;
+	margin: 0 auto;
+	height: 2px;
+	background-color: orangered;
+	border-radius: 2px;
+}
+
+.line:not(:last-child) {
+	margin-bottom: 4px;
+}
+
+.nav-item {
+	height: 100%;
+	vertical-align: top;
+	border-left: 1px solid lightgray;
+}
+
+.tnw-conf {
+	width: 100%;
+	background-color: #fd3;
+	padding: 5px 0;
+	font-size: .9em;
+	position: fixed;
+	top: 50px;
+	z-index: 10;
+}
+
+header {
+	margin-top: 79px;
+}
+
+/**
+	BIG LINKS
+**/
+
+.big-link__text {
+	position: absolute;
+	bottom: 15px;
+	left: 10px;
+}
+
+.big-link h4 {
+	color: white;
+	font-size: 13px;
+}
+
+.big-link h3 {
+	font-size: 24px;
+	font-weight: 700;
+	color: white;
+}
+
+.big-link p {
+	color: gray;
+	font-size: 13px;
+}
+
+.big-link a {
+	color: gray;
+}
+
+.big-link {
+	height: 175px;
+	margin: 0 8px 8px 8px;
+	position: relative;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.big-link:nth-child(1) {
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
+					  url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/Chrome-PiP-796x418.jpg);
+}
+
+.big-link:nth-child(2) {
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
+					  url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/4432787411_540285e5a6_o-796x531.jpg);
+}
+
+.big-link:nth-child(3) {
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
+					  url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/07/OnePlus-6-Red-3-of-6-796x417.jpg);
+}
+
+.big-link-section .big-link {
+	height: 400px;
+	margin: 0 0 2px 0;
+}
+
+.big-link-section:nth-of-type(2) .big-link {
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
+				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/nkbitcoin-368x276.jpg);
+}
+
+.big-link-section:nth-of-type(3) .big-link {
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
+				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/Twitter-Removal-368x276.jpg);
+}
+
+.big-link-section:nth-of-type(4) .big-link {
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
+				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/Tesla_Model_3-368x276.jpg);
+}
+
+.big-link-section:nth-of-type(5) .big-link {
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
+				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/Untitled-design-7-3-368x276.png);
+}
+
+.big-link-section:nth-of-type(6) .big-link {
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
+				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/wezdrbhdnbz-368x276.jpg);
+}
+
+.big-link-section:nth-of-type(7) .big-link {
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
+				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/stock-image-68605075-xl-2015-1-368x276.jpg);
+}
+
+.big-link-section:nth-of-type(8) .big-link {
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
+				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/nkbitcoin-368x276.jpg);
+}
+
+.big-link-section:nth-of-type(9) .big-link {
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
+				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/chinaeth-368x276.jpg);
+}
+
+.big-link-section:nth-of-type(10) .big-link {
+	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
+				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/Games-to-distract-from-death-368x276.jpg);
+}
+
+.big-link__footer img {
+	float: right;
+	width: 100px;
+	height: 100px;
+}
+
+.big-link__footer {
+	background-color: rgba(255, 68, 34, .01);
+	height: 100px;
+}
+
+.big-link__footer h4,
+.big-link__footer a {
+	color: #f42;
+	padding-left: 15px;
+}
+
+.big-link__footer h4 {
+	padding-top: 10px;
+}
+
+.big-link__footer a {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+.big-link__links {
+	margin-left: 25px;
+	list-style-type: disc; 
+	list-style-image: url(dot.png);
+}
+
+.big-link__links li {
+	padding: 7px 0;
+	border-bottom: 1px solid lightgray;
+}
+
+.big-link__links a {
+	font-size: 12px;
+	color: gray;
+}
+
+.big-link__links a:hover {
+	color: black;
+}
+
+/***************************************************
+					MAIN SECTION
+***************************************************/
+main {
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-bottom: 20px;
+}
+
+/**
+	MINI LINKS
+**/
+
+.mini-link {
+	margin-bottom: 10px;
+}
+
+.mini-link img {
+	width: 80px;
+	height: 80px;
+	float: left;
+	margin-right: 10px;
+}
+
+.mini-link h3 {
+	font-weight: bold;
+	margin-bottom: 10px;
+}
+
+.mini-link p,
+.mini-link p a {
+	font-size: 13px;
+	color: lightgray;
+}
+
+.mini-links > a {
+	float: right;
+	color: #f42;
+	font-size: 15px;
+	margin-top: -49px;
+}
+
+.mini-links > a:hover {
+	color: black;
+}
+
+/**
+	INDEXES
+**/
+.index {
+	margin-bottom: 25px;
+}
+
+.indexes div {
+	margin-bottom: 5px;
+}
+
+.indexes a {
+	font-size: 14px;
+	color: #f42;
+}
+
+.index:nth-of-type(1) {
+	margin-top: 20px;
+}
+
+.index img {
+	width: 70px;
+	float: left;
+	margin: 15px;
+}
+
+.index h3 {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	background-color: #f42;
+}
+
+.info {
+	background-color: rgba(255, 68, 34, .08);
+}
+
+.money {
+	font-weight: bold;
+}
+
+.type {
+	font-size: 12px;
+	color: gray;
+}
+
+.category {
+	font-size: 13px;
+}
+
+.categories {
+	padding: 10px;
+	background: rgba(255, 68, 34, .01);
+	border-bottom: 1px solid rgba(255, 68, 34, .2);
+}
+
+.extra {
+	padding-left: 10px;
+	font-size: 12px;
+	background: rgba(255, 68, 34, .01);
+}
+
+.extra a {
+	color: gray;
+}
+
+/**
+	FOOTER
+**/
+.footer-top {
+	text-align: center;
+	background-color: #131313;
+	height: 150px;
+}
+
+.social-media-links li,
+.footer-nav li {
+	display: inline-block;
+}
+
+.social-media-links {
+	padding: 30px 0;
+	color: white;
+}
+
+.social-media-links li {
+	border-radius: 50%;
+	background-color: #333;
+	padding: 10px 12px;
+}
+
+.social-media-links li:not(:last-child) {
+	margin-right: 2px;
+}
+
+.footer-top a {
+	font-weight: bold;
+	font-size: 13px;
+	color: gray;
+}
+
+.footer-bottom {
+	background-color: black;
+	color: gray;
+	font-size: 14px;
+	line-height: 18px;
+	text-align: center;
+	padding: 35px 0;
+}
+
+.footer-bottom a {
+	color: white;
+}
+
+.footer-bottom img {
+	width: 30px;
+}
+
+.heart {
+	color: red;
+}
