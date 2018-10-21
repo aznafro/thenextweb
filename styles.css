@@ -63,19 +63,35 @@ body {
 	font: 400 100% Roboto, sans-serif;
 }
 
-h2 {
+h2,
+h2.sub-heading a {
 	display: inline-block;
 	font-size: 30px;
 	font-weight: bold;
 	color: #f42;
+}
+
+h2 {
 	margin-top: 50px;
 	margin-bottom: 20px;
 }
 
-h2:hover {
+h2:hover,
+h2.sub-heading a:hover {
 	color: black;
 	cursor: pointer;
 }
+
+h2.sub-heading {
+	cursor: auto;
+}
+
+.sub-heading {
+	display: block;
+	width: 100%;
+}
+
+
 
 /**
 	LINKS
@@ -236,6 +252,14 @@ h1 img {
 	top: 20px;
 	width: 55%;
 	height: 30%;
+}
+
+h1 p.date {
+	float: right;
+	margin-top: 15px;
+	padding-right: 20px;
+	color: white;
+	letter-spacing: 1px;
 }
 
 .big-links {
@@ -436,9 +460,11 @@ main {
 
 p.price {
 	color: black;
+	font-size: 14px;
 }
 
 .price span {
+	font-size: 13px;
 	color: lightgray;
 	text-decoration: line-through;
 }
@@ -658,8 +684,12 @@ p.price {
 	/**
 		BIG LINKS
 	**/
+	header {
+		margin-top: 111px;
+	}
+
 	.big-links {
-		height: 300px;
+		height: 350px;
 	}
 
 	header .big-link:first-child {
@@ -791,7 +821,7 @@ p.price {
 	}
 
 	.big-links {
-		height: 465px;
+		height: 435px;
 	}
 
 	/**
@@ -812,7 +842,6 @@ p.price {
 	/**
 		INDEXES
 	**/
-
 	.index {
 		width: 23.5%;
 	}
@@ -827,6 +856,11 @@ p.price {
 
 	.index:last-child {
 		display: block;
+	}
+
+	.index-links {
+		justify-content: flex-end;
+		margin-top: -45px;
 	}
 
 	/**
