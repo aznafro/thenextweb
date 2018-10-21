@@ -78,38 +78,6 @@ h2:hover {
 }
 
 /**
-	HELPER CLASSES
-
-**/
-.right {
-	float: right;
-}
-
-.left {
-	float: left;
-}
-
-.text-center {
-	text-align: center;
-}
-
-.clearfix::after {
-	content: "";
-	clear: both;
-	display: table;
-}
-
-.vert-pad-sm {
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
-
-.vert-pad-md {
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-/**
 	LINKS
 **/
 a {
@@ -122,12 +90,75 @@ a {
 **/
 
 .header-nav {
-	background-color: white;
 	width: 100%;
 	height: 50px;
 	position: fixed;
 	top: 0;
 	z-index: 10;
+}
+
+.header-nav__links {
+	background-color: white;
+}
+
+.top-half-nav {
+	background-color: black;
+}
+
+.bot-half-nav {
+	height: 46px;
+	position: relative;
+}
+
+.top-half-nav li,
+.bot-half-nav li {
+	display: inline-block;
+}
+
+.top-half-nav li {
+	padding: 6px 8px;
+}
+
+.top-half-nav ul:first-child li:first-child {
+	padding-left: 17px;
+}
+
+.bot-half-right-nav {
+	width: 100%;
+}
+
+
+.bot-half-nav li {
+	padding: 15px 10px;
+}
+
+.bot-half-nav ul:first-child li:first-child {
+	padding-left: 17px;
+}
+
+.bot-half-nav i {
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.top-half-nav a,
+.bot-half-nav a {
+	color: gray;
+}
+
+.top-half-nav a {
+	font-size: 12px;
+}
+
+.bot-half-nav a {
+	font-size: 13px;
+}
+
+.top-half-nav a:hover {
+	color: white;
+}
+
+.bot-half-nav a:hover {
+	color: black;
 }
 
 .logo {
@@ -183,18 +214,18 @@ a {
 	background-color: #fd3;
 	padding: 5px 0;
 	font-size: .9em;
-	position: fixed;
-	top: 50px;
-	z-index: 10;
 }
 
 header {
-	margin-top: 79px;
+	margin-top: 81px;
 }
 
 /**
 	BIG LINKS
 **/
+.big-links {
+	padding: 0 8px;
+}
 
 .big-link__text {
 	position: absolute;
@@ -222,75 +253,86 @@ header {
 	color: gray;
 }
 
-.big-link {
+header .big-link {
+	width: 100%;
 	height: 175px;
-	margin: 0 8px 8px 8px;
+	margin-bottom: 8px;
 	position: relative;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
-.big-link:nth-child(1) {
+header .big-link:first-child {
 	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
 					  url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/Chrome-PiP-796x418.jpg);
 }
 
-.big-link:nth-child(2) {
+header .big-link:nth-child(2) {
 	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
 					  url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/4432787411_540285e5a6_o-796x531.jpg);
 }
 
-.big-link:nth-child(3) {
+header .big-link:last-child {
 	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
 					  url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/07/OnePlus-6-Red-3-of-6-796x417.jpg);
 }
 
-.big-link-section .big-link {
+/*.big-link-section .big-link {
 	height: 400px;
 	margin: 0 0 2px 0;
+}*/
+
+.big-link__img {
+	position: relative;
+	width: 100%;
+	height: 200px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
 
-.big-link-section:nth-of-type(2) .big-link {
+.big-link-section:nth-of-type(1) .big-link__img {
 	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
 				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/nkbitcoin-368x276.jpg);
+
 }
 
-.big-link-section:nth-of-type(3) .big-link {
+.big-link-section:nth-of-type(2) .big-link__img {
 	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
 				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/Twitter-Removal-368x276.jpg);
 }
 
-.big-link-section:nth-of-type(4) .big-link {
+.big-link-section:nth-of-type(3) .big-link__img {
 	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
 				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/Tesla_Model_3-368x276.jpg);
 }
 
-.big-link-section:nth-of-type(5) .big-link {
+.big-link-section:nth-of-type(4) .big-link__img {
 	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
 				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/Untitled-design-7-3-368x276.png);
 }
 
-.big-link-section:nth-of-type(6) .big-link {
+.big-link-section:nth-of-type(5) .big-link__img {
 	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
 				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/wezdrbhdnbz-368x276.jpg);
 }
 
-.big-link-section:nth-of-type(7) .big-link {
+.big-link-section:nth-of-type(6) .big-link__img {
 	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
 				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/stock-image-68605075-xl-2015-1-368x276.jpg);
 }
 
-.big-link-section:nth-of-type(8) .big-link {
+.big-link-section:nth-of-type(7) .big-link__img {
 	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
 				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/nkbitcoin-368x276.jpg);
 }
 
-.big-link-section:nth-of-type(9) .big-link {
+.big-link-section:nth-of-type(8) .big-link__img {
 	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
 				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/chinaeth-368x276.jpg);
 }
 
-.big-link-section:nth-of-type(10) .big-link {
+.big-link-section:nth-of-type(9) .big-link__img {
 	background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0)),
 				url(https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2018/10/Games-to-distract-from-death-368x276.jpg);
 }
@@ -299,6 +341,7 @@ header {
 	float: right;
 	width: 100px;
 	height: 100px;
+	margin-top: 2px;
 }
 
 .big-link__footer {
@@ -376,8 +419,20 @@ main {
 	color: lightgray;
 }
 
-.mini-links > a {
-	float: right;
+p.price {
+	color: black;
+}
+
+.price span {
+	color: lightgray;
+	text-decoration: line-through;
+}
+
+.deals {
+	display: inline-block;
+	vertical-align: top;
+	width: 100%;
+	text-align: right;
 	color: #f42;
 	font-size: 15px;
 	margin-top: -49px;
@@ -394,7 +449,7 @@ main {
 	margin-bottom: 25px;
 }
 
-.indexes div {
+.indexes li {
 	margin-bottom: 5px;
 }
 
@@ -418,6 +473,7 @@ main {
 	font-size: 20px;
 	font-weight: bold;
 	background-color: #f42;
+	max-height: 44px;
 }
 
 .info {
@@ -467,6 +523,10 @@ main {
 	display: inline-block;
 }
 
+.footer-nav li:not(:last-child) {
+	margin-right: 5px;
+}
+
 .social-media-links {
 	padding: 30px 0;
 	color: white;
@@ -483,9 +543,8 @@ main {
 }
 
 .footer-top a {
-	font-weight: bold;
 	font-size: 13px;
-	color: gray;
+	color: rgba(255, 255, 255, 0.6);
 }
 
 .footer-bottom {
@@ -507,4 +566,198 @@ main {
 
 .heart {
 	color: red;
+}
+
+/**
+	HELPER CLASSES
+
+**/
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+.vert-pad-sm {
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.vert-pad-md {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.hidden {
+	display: none;
+}
+
+@media only screen and (min-width: 768px) {
+	/**
+		TOP NAV
+	**/
+	.logo {
+		padding: 32px 19px 29px 19px;
+	}
+
+	.menu-box {
+		display: none;
+	}
+
+	.bot-half-nav__box {
+		display: inline-block;
+		width: calc(100% - 105px);
+	}
+
+	.top-half-nav,
+	.bot-half-nav {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.bot-half-nav ul:first-child {
+		display: inline-block;
+	}
+
+	.bot-half-right-nav {
+		width: 200px;
+		min-width: 200px;
+	}
+
+	.tnw-conf {
+		text-align: left;
+		padding-left: 120px;
+	}
+
+	/**
+		BIG LINKS
+	**/
+	header .big-link:first-child {
+		float: left;
+		margin-right: 1%;
+		width: 64%;
+		height: 300px;
+	}
+
+	header .big-link:not(:first-child) {
+		float: right;
+		width: 35%;
+		height: 146px;
+	}
+	/**
+		MINI LINKS
+	**/
+	.mini-links {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.mini-link {
+		width: 31.33%;
+		margin-bottom: 20px;
+	}
+
+	.mini-link:not(:nth-child(3n)) {
+		margin-right: 2.5%;
+	}
+
+	.mini-link img {
+		width: 100%;
+		height: 120px;
+		margin-bottom: 10px;
+		margin-right: 0;
+	}
+
+	.mini-link h3,
+	.mini-link p {
+		display: block;
+	}
+
+	/**
+		INDEXES
+	**/
+	.indexes {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.index {
+		width: 31.33%;
+	}
+
+	.index:first-child {
+		margin-top: 0;
+	}
+
+	.index:not(:nth-child(3n)) {
+		margin-right: 2.5%;
+	}
+
+	.index-links {
+		width: 100%;
+		display: flex;
+		margin-bottom: 15px;
+	}
+
+	.index-links li:not(:first-child) {
+		padding-left: 15px;
+	}
+
+	.index-links li:not(:last-child) {
+		padding-right: 15px;
+		border-right: 1px solid #f42;
+	}
+
+	/**
+		BIG LINKS SECTION
+	**/
+	.big-link-sections {
+		display: flex;
+		flex-wrap: wrap;
+	}
+
+	.big-link-section {
+		width: 47%;
+	}
+
+	.big-link-section:not(:nth-of-type(even)) {
+		margin-right: 3%;
+	}
+
+	/**
+		BOTTOM MINI LINKS
+	**/
+	.mini-links-bottom img {
+		height: 200px;
+	}
+
+	/**
+		FOOTER
+	**/
+	.social-media-links li:not(:last-child),
+	.footer-nav li:not(:last-child) {
+		margin-right: 15px;
+	}
+
+	.footer-bottom p {
+		display: inline-block;
+	}
+}
+
+@media only screen and (min-width: 1024px) {
+	.index:last-child {
+		display: block;
+	}
 }
