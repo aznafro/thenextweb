@@ -106,7 +106,7 @@ a {
 }
 
 .bot-half-nav {
-	height: 46px;
+	height: 50px;
 	position: relative;
 }
 
@@ -223,6 +223,21 @@ header {
 /**
 	BIG LINKS
 **/
+h1 {
+	background: linear-gradient(165deg, crimson 15%, transparent 70%, transparent 100%);
+	background-repeat: no-repeat;
+	height: 100%;
+	display: none;
+}
+
+h1 img {
+	position: relative;
+	left: 20px;
+	top: 20px;
+	width: 55%;
+	height: 30%;
+}
+
 .big-links {
 	padding: 0 8px;
 }
@@ -616,24 +631,23 @@ p.price {
 		display: none;
 	}
 
-	.bot-half-nav__box {
-		display: inline-block;
-		width: calc(100% - 105px);
-	}
-
-	.top-half-nav,
-	.bot-half-nav {
+	.top-half-nav {
 		display: flex;
 		justify-content: space-between;
 	}
 
 	.bot-half-nav ul:first-child {
 		display: inline-block;
+		position: absolute;
 	}
 
 	.bot-half-right-nav {
 		width: 200px;
 		min-width: 200px;
+		position: absolute;
+		right: 0;
+		z-index: 5;
+		background: white;
 	}
 
 	.tnw-conf {
@@ -644,17 +658,21 @@ p.price {
 	/**
 		BIG LINKS
 	**/
+	.big-links {
+		height: 300px;
+	}
+
 	header .big-link:first-child {
 		float: left;
 		margin-right: 1%;
 		width: 64%;
-		height: 300px;
+		height: 100%;
 	}
 
 	header .big-link:not(:first-child) {
 		float: right;
 		width: 35%;
-		height: 146px;
+		height: 49%;
 	}
 	/**
 		MINI LINKS
@@ -757,7 +775,72 @@ p.price {
 }
 
 @media only screen and (min-width: 1024px) {
+	/**
+		HEADER/NAV
+	**/
+	.logo {
+		display: none;
+	}
+
+	.tnw-conf {
+		padding-left: 17px;
+	}
+
+	h1 {
+		display: block;
+	}
+
+	.big-links {
+		height: 465px;
+	}
+
+	/**
+		MINI LINKS
+	**/
+	.mini-link {
+		width: 23.5%;
+	}
+
+	.mini-link:not(:nth-child(3n)) {
+		margin-right: 0;
+	}
+
+	.mini-link:not(:nth-child(4n)) {
+		margin-right: 2%;
+	}
+
+	/**
+		INDEXES
+	**/
+
+	.index {
+		width: 23.5%;
+	}
+
+	.index:not(:nth-child(3n)) {
+		margin-right: 0;
+	}
+
+	.index:not(:nth-child(4n)) {
+		margin-right: 2%;
+	}
+
 	.index:last-child {
 		display: block;
+	}
+
+	/**
+		BIG LINK SECTION
+	**/
+	.big-link-section {
+		width: 31.33%;
+	}
+
+	.big-link-section:not(:nth-child(2n)) {
+		margin-right: 0;
+	}
+
+	.big-link-section:not(:nth-child(3n)) {
+		margin-right: 2.5%;
 	}
 }
