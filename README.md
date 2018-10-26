@@ -7,4 +7,4 @@ I decided to make this site mobile first (meaning the first iteration of this we
 
 This is the original [The Next Web homepage](https://thenextweb.com/).
 
-My remake can be found [here](https://aznafro.github.io/tnw/).
+My remake can be found [here](https://aznafro.github.io/thenextweb/).
